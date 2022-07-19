@@ -1,0 +1,9 @@
+#!/bin/sh
+
+File=$1
+tmp=/tmp/fmt
+
+mkdir -p $tmp
+fmt -s $File > $tmp/out
+cp out $File
+echo 'Original file at $tmp/out'
